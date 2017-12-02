@@ -1,3 +1,3 @@
 @echo off
-python 5.py
+python execute.py
 pause

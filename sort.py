@@ -260,7 +260,7 @@ class Sort():
 				partition_list[number] = number_list
 		if flag == len(list):
 			return False
-		for i in range(-10,10):
+		for i in range(-9,10):
 			if partition_list.has_key(i):
 				for j in range(len(partition_list[i])):
 					list[k] = partition_list[i][j]

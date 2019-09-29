@@ -7,8 +7,8 @@ class Sort():
 		self.list = list
 
 	def description(self):
-		print "Now we will do number sort."
-		print """we have mang ways to sort numbers.Choose one to sort your list!
+		print("Now we will do number sort.")
+		print("""we have mang ways to sort numbers.Choose one to sort your list!
 		quick
 		merge
 		bubble
@@ -16,7 +16,7 @@ class Sort():
 		insertion
 		heap
 		shell
-		radix"""
+		radix""")
 
 
 ######################################################################################
@@ -25,22 +25,22 @@ class Sort():
 	#排序主函数
 	def sort(self):
 		while True:
-			self.name = raw_input("Please input a sort kind:")
+			self.name = input("Please input a sort kind:")
 			function_name = self.name + "_sort"
 			try:
 				func = getattr(self, function_name)
 			except Exception:
-				print "Please input a usable sort arthimetic."
+				print("Please input a usable sort arthimetic.")
 				continue
 			break
-		print "This is a %s sort" % self.name
+		print("This is a %s sort" % self.name)
 		l = list(self.list)
 		starttime = time.clock()
 		func(l, 0, len(l) - 1)
 		endtime = time.clock()
-		print "the sorted list:",
-		print l
-		print "sort spend time:%f seconds" % (endtime - starttime)
+		print("the sorted list:"),
+		print(l)
+		print("sort spend time:%f seconds" % (endtime - starttime))
 
 
 	#交换函数
@@ -214,7 +214,6 @@ class Sort():
 		list = args[0]
 		gap = len(list)/2
 		while gap >= 1:
-			print gap
 			for i in range(gap, len(list)):
 				cusor = list[i]
 				j = i - gap

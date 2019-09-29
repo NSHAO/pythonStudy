@@ -2,19 +2,19 @@ from sort import Sort
 import datetime
 
 while True:
-	print "input exit to stop."
-	input = raw_input("Please input a number list(like '[1,2,3]'):")
-	if input == "exit":
+	print("input exit to stop.")
+	my_input = input("Please input a number list(like '[1,2,3]'):")
+	if my_input == "exit":
 		break
 	else:
 		try:
-			input = eval(input)
+			my_input = eval(my_input)
 		except Exception:
-			print "not a number list.please input again!"
+			print("not a number list.please input again!")
 			continue
-	if not isinstance(input, list):
-		print "not a number list.please input again!"
+	if not isinstance(my_input, list):
+		print("not a number list.please input again!")
 		continue
-	print "the original list:",
-	print input
-	Sort(input).sort() 
+	print("the original list:"),
+	print(my_input)
+	Sort(my_input).sort() 
